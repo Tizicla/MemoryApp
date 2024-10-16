@@ -180,7 +180,7 @@ export default function App() {
     <View style={styles.container}>
       {selectedMemory ? (
         <View style={styles.details}>
-          <Text style={styles.detailText}> {selectedMemory.nombre}</Text>
+          <Text style={styles.detailTitle}> {selectedMemory.nombre}</Text>
           <Text style={styles.detailText}>Fecha: {selectedMemory.fecha}</Text>
           <Text style={styles.detailText}> {selectedMemory.descripcion}</Text>
           <TouchableOpacity style={styles.backButton} onPress={() => setSelectedMemory(null)}>
@@ -254,11 +254,23 @@ const styles = StyleSheet.create({
   details: {
     padding: 20,
     alignItems: 'center',
+    backgroundColor: '#62176A',
+    borderRadius: 10,
+    margin: 10,
+  },
+  detailTitle:{
+    fontSize: 24,
+    color: '#fff',
+    marginBottom: 10,
+    fontWeight: 'bold',
   },
   detailText: {
     fontSize: 20,
     color: '#fff',
     marginBottom: 10,
+  },
+  justifyText:{
+    textAlign: 'justify',
   },
   backButton: {
     backgroundColor: '#FFC7FF',
